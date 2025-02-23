@@ -22,7 +22,13 @@ The app is built with the help of the course **Build a Twitter like app for Andr
 * Like, Retweet & Delete a tweet.
 
 * Dependency Injection using Koin for better architecture.
-  
+
+## Important Note
+* The app may take some time to sync your changes such as like, retweet, etc. It is suggested to either wait a second or simply swipe refresh the page.
+
+* While updating user profile,
+
+* User verification
 
 ## 🛠️ Tech Stack
 
