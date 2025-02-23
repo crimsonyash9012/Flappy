@@ -24,11 +24,15 @@ The app is built with the help of the course **Build a Twitter like app for Andr
 * Dependency Injection using Koin for better architecture.
 
 ## Important Note
+* To start working with the app, either create tweets, search for tweets with respective hashtags or follow any user.
+  
 * The app may take some time to sync your changes such as like, retweet, etc. It is suggested to either wait a second or simply swipe refresh the page.
 
-* While updating user profile,
+* While updating user profile, make sure you enter phone number in the format: (country_code)(number).
 
-* User verification
+* While updating user profile, make sure that username is not more than 10 characters.
+
+* Any user with more than 10 followers will have a verified blue tick on their profile.
 
 ## 🛠️ Tech Stack
 
