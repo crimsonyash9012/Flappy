@@ -1,4 +1,4 @@
-# 📈 Twitter Clone App
+# Twitter Clone App
 
 A Twitter Clone App with enormous features built with Kotlin that uses Appwrite BaaS for User Authentication, Realtime Database and Storage. The app follows clean MVVM architecture principles and uses Koin for dependency injection.
 The app is built with the help of the course **Build a Twitter like app for Android**.
@@ -17,7 +17,7 @@ The app is built with the help of the course **Build a Twitter like app for Andr
 
 * Selected User Profile Page - See selected user profile, follow and unfollow him.
 
-* Create tweets addiing images of your choice (size less than 3 MB).
+* Create tweets adding images of your choice (size less than 3 MB).
 
 * Like, Retweet & Delete a tweet.
 
@@ -36,14 +36,20 @@ Backend: Appwrite
 
 ## 📸 Screenshots
 
-![Screenshot 2025-02-23 111719](https://github.com/user-attachments/assets/61de5d96-8b1f-4647-9ef9-75c7098912ab)
-![Screenshot 2025-02-23 111737](https://github.com/user-attachments/assets/ec2d3c8c-b4a5-4d20-8b6f-b3cbe62fb9b4)
+![login](https://github.com/user-attachments/assets/f215943a-90ae-4535-be43-494b50d4df15)
+![signup](https://github.com/user-attachments/assets/ecbf901d-0cc7-4e3e-98ec-fea4149920f9)
+![home](https://github.com/user-attachments/assets/db7b0a14-4752-4a5c-91ee-55c3b44ff342)
+![search](https://github.com/user-attachments/assets/38796b3f-d0de-4829-bbf5-6d8b5da026da)
+![myact](https://github.com/user-attachments/assets/918c989b-830d-466f-898d-15b32d83969c)
+![post](https://github.com/user-attachments/assets/9f861194-8cfd-4521-9aa6-a5a8b75b6421)
+![user](https://github.com/user-attachments/assets/7d5470c3-1b44-43e1-bfd8-84103a89bfc2)
+![other](https://github.com/user-attachments/assets/c6b608f4-58e3-4428-b2cb-f846439860e3)
 
 ## 🔧 Installation
 
 Clone the repository:
 
-git clone https://github.com/crimsonyash9012/CryptoTracker
+git clone https://github.com/crimsonyash9012/Twitter-Clone
 
 Open the project in Android Studio.
 
