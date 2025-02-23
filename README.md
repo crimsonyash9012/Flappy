@@ -65,6 +65,8 @@ Open the project in Android Studio.
 
 Build and run the app on an emulator or physical device.
 
+APK Download Link: https://www.mediafire.com/file/i9dpcxf196cbbxy/twitter.apk/file
+
 
 ## 💡 Future Enhancements
 
