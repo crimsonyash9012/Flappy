@@ -1,0 +1,62 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@android:color/white"
+    tools:context=".activity.CommentActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <!-- Tweet Layout -->
+                <include
+                    android:id="@+id/tweetLayout"
+                    layout="@layout/item_tweet" />
+
+                <!-- Divider -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#000000"
+                    android:layout_margin="8dp" />
+
+                <!-- Comments Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="Comments"
+                            android:layout_weight="1"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/addComment"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/rounded_comment"
+                            android:contentDescription="Comment icon" />
+                </LinearLayout>
+
+                <!-- ComposeView for Comments -->
+                <androidx.compose.ui.platform.ComposeView
+                    android:id="@+id/commentComposeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+        </LinearLayout>
+</ScrollView>
+

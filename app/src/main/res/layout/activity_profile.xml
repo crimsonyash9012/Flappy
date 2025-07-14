@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:background="@drawable/cloudy_back"
+    tools:context=".activity.ProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/profileProgressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent_grey"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:padding="@dimen/grid_2x"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/img_back"
+                    android:padding="5dp"
+                    android:src="@drawable/arrow_back"
+                    android:layout_alignParentStart="true"
+                    android:layout_width="44dp"
+                    android:clickable="true"
+                    android:layout_height="44dp"/>
+
+                <ImageView
+                    android:id="@+id/img_edit"
+                    android:padding="1dp"
+                    android:src="@drawable/vector_edit"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"/>
+                <ImageView
+                    android:id="@+id/img_logout"
+                    android:padding="1dp"
+                    android:src="@drawable/baseline_logout_24"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="41dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:clickable="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"/>
+
+            </RelativeLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="My"
+                android:textSize="30sp"
+                android:layout_marginStart="@dimen/grid_3x"
+                android:textColor="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:text="Profile"
+                android:textSize="33sp"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/grid_3x"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/itemImage"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/grid_3x"
+        android:layout_marginRight="@dimen/grid_3x"
+        layout="@layout/item_image"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include
+                android:id="@+id/itemAdd"
+                layout="@layout/item_add"/>
+            <include
+                android:id="@+id/itemInfo"
+                layout="@layout/item_info"/>
+            <include
+                android:id="@+id/itemEmail"
+                layout="@layout/item_email"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
