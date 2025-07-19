@@ -16,6 +16,8 @@ A Social Media App with enormous features built with Kotlin that uses Appwrite B
 
 * Selected User Profile Page - You can see the profile of the person who has posted any flap just by clicking on his name on the flap. It will contain user information similar to you (name, username, post numbers, followers, following, about and contact info). You can also follow and unfollow him over there.
 
+* Comment Page - User when clicks the comment icon on any flap, he'll be sent to a page where he can comment on the flap. It will also show the date when he commented.
+
 * Create tweets adding images of your choice (size less than 3 MB).
 
 * Like, Support, Comment & Delete functionality for flaps.
@@ -42,6 +44,10 @@ Dependency Injection: Koin
 Backend: Appwrite
 
 ## 📸 Screenshots
+
+Login: 
+<img width="668" height="1486" alt="image" src="https://github.com/user-attachments/assets/19b3b659-3ed6-498a-a0fa-dd3e504c8651" />
+
 
 
 ## 🔧 Installation
