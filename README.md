@@ -45,9 +45,21 @@ Backend: Appwrite
 
 ## 📸 Screenshots
 
-Login: 
-<img width="668" height="1486" alt="image" src="https://github.com/user-attachments/assets/19b3b659-3ed6-498a-a0fa-dd3e504c8651" />
+* Login & Sign Up: 
+<img width="334" height="743" alt="image" src="https://github.com/user-attachments/assets/19b3b659-3ed6-498a-a0fa-dd3e504c8651" />
+<img width="334" height="743" alt="Screenshot 2025-07-19 at 11 35 35 PM" src="https://github.com/user-attachments/assets/81751e1f-5494-4922-a48e-be1932b27ac4" />
 
+* Home, Search and My Activity
+<img width="333" height="739" alt="Screenshot 2025-07-19 at 11 32 51 PM" src="https://github.com/user-attachments/assets/1c24a906-702a-49e7-b060-ed53c791f8e1" />
+<img width="335" height="744" alt="Screenshot 2025-07-19 at 11 33 56 PM" src="https://github.com/user-attachments/assets/44b7dab5-b82f-4b7a-89e7-d2347392f319" />
+<img width="335" height="744" alt="Screenshot 2025-07-19 at 11 34 23 PM" src="https://github.com/user-attachments/assets/2ff71a4e-1ef4-4ed0-8332-c021de3d278a" />
+
+* My and Your Profile
+<img width="337" height="741" alt="Screenshot 2025-07-19 at 11 33 02 PM" src="https://github.com/user-attachments/assets/0f992de0-e904-4ba9-a468-0015013a50cb" />
+<img width="335" height="743" alt="Screenshot 2025-07-19 at 11 33 41 PM" src="https://github.com/user-attachments/assets/b8294594-995b-440e-b56b-40fe6b6cae06" />
+
+* Comments
+<img width="338" height="740" alt="Screenshot 2025-07-19 at 11 34 33 PM" src="https://github.com/user-attachments/assets/6c9925b9-82c1-452d-a0b6-b8aeea2e6cb5" />
 
 
 ## 🔧 Installation
