@@ -152,6 +152,30 @@ class HomeFragment : TwitterFragment() {
             lifecycleScope.launch {
                 val jobs = mutableListOf<Deferred<List<Tweet>>>()
 
+                // Fetch current user's tweets first
+                val currentUserJob = async(Dispatchers.IO) {
+                    try {
+                        val success = CompletableDeferred<List<Tweet>>()
+                        appwriteViewModel.getCurrentUserTweet(
+                            userId,
+                            onSuccess = {
+                                val docs = appwriteViewModel.getCurUserTweet.value?.documents ?: emptyList()
+                                val tweets = docs.mapNotNull { doc -> mapToTweet(doc.data) }
+                                success.complete(tweets)
+                            },
+                            onError = {
+                                Log.e("updateList", "Error fetching current user tweets: ${it.message}")
+                                success.complete(emptyList())
+                            }
+                        )
+                        success.await()
+                    } catch (e: Exception) {
+                        Log.e("updateList", "Exception fetching current user tweets: ${e.message}")
+                        emptyList()
+                    }
+                }
+                jobs.add(currentUserJob)
+
                 // Fetch followed hashtags
                 for (hashtag in followedHashtags) {
                     val job = async(Dispatchers.IO) {
@@ -219,17 +243,32 @@ class HomeFragment : TwitterFragment() {
 
                 // Wait for all jobs to finish
                 val results = jobs.awaitAll()
-                results.forEach { allTweets.addAll(it) }
+                
+                // Separate current user tweets from other tweets
+                val currentUserTweets = results.firstOrNull() ?: emptyList()
+                val otherTweets = mutableListOf<Tweet>()
+                results.drop(1).forEach { otherTweets.addAll(it) }
+
+                // Get 2-3 random tweets from current user (if available)
+                val topUserTweets = if (currentUserTweets.isNotEmpty()) {
+                    currentUserTweets.shuffled().take(3)
+                } else {
+                    emptyList()
+                }
+
+                // Remove the selected user tweets from other tweets to avoid duplicates
+                val topUserTweetIds = topUserTweets.map { it.tweetId }.toSet()
+                val filteredOtherTweets = otherTweets.filter { it.tweetId !in topUserTweetIds }
 
                 val oneHourAgo = System.currentTimeMillis() - 60 * 60 * 1000
-                val recentTweets = allTweets.filter { it.timestamp!!.toLong() >= oneHourAgo }
-                val otherTweets = allTweets.filter { it.timestamp!!.toLong() < oneHourAgo }
+                val recentOtherTweets = filteredOtherTweets.filter { it.timestamp!!.toLong() >= oneHourAgo }
+                val olderOtherTweets = filteredOtherTweets.filter { it.timestamp!!.toLong() < oneHourAgo }
 
-                val finalTweets = if (recentTweets.isNotEmpty()) {
-                    val shuffledOthers = otherTweets.shuffled()
-                    recentTweets + shuffledOthers
+                val finalTweets = if (recentOtherTweets.isNotEmpty()) {
+                    val shuffledOlderTweets = olderOtherTweets.shuffled()
+                    topUserTweets + recentOtherTweets + shuffledOlderTweets
                 } else {
-                    allTweets.shuffled()
+                    topUserTweets + filteredOtherTweets.shuffled()
                 }
 
                 // Update UI

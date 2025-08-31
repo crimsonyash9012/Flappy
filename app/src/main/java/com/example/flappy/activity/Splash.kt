@@ -6,10 +6,7 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.flappy.R
 import com.example.flappy.mvvm.AppwriteViewModel
-import com.example.flappy.mvvm.appwriteModule
-import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
-import org.koin.core.context.startKoin
 
 class Splash : AppCompatActivity() {
 
@@ -18,11 +15,6 @@ class Splash : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-
-        startKoin {
-            androidContext(this@Splash)
-            modules(listOf(appwriteModule))
-        }
 
         appwriteViewModel.getSession()
         appwriteViewModel.session.observe(this) {
