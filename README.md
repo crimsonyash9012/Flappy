@@ -31,7 +31,7 @@ A Social Media App with enormous features built with Kotlin that uses Appwrite B
 
 * While updating user profile, make sure that username is not more than 10 characters.
 
-* Any user with more than 10 followers will be SKY user. This name is given to those who are popular members on the platform. Rest users will be SURFACE users. This will be displayed on every user's profile with a badge alongside representing their popularity.
+* Any user with more than 10 followers will be SKY user. This name is given to those who are popular members on the platform. Rest users will be SURFACE users. SKY users posts will be more visible than that of the SURFACE users. This will be displayed on every user's profile with a badge alongside representing their popularity.
 
 ## 🛠️ Tech Stack
 
@@ -71,8 +71,6 @@ git clone https://github.com/crimsonyash9012/Flappy
 Open the project in Android Studio.
 
 Build and run the app on an emulator or physical device.
-
-APK Download Link: https://www.mediafire.com/file/i9dpcxf196cbbxy/twitter.apk/file
 
 
 ## 💡 Future Enhancements
